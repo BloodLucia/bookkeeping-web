@@ -1,10 +1,11 @@
-import { Icon } from "../components/Icon"
+import { Gradient } from "../components/Gradient"
 
 export const SignInPage: React.FC = () => {
     return (
         <>
-            <div text-red>SignIn Page</div>
-            <Icon name="pig" />
+            <Gradient>
+                Hello
+            </Gradient>
         </>
     )
 }
