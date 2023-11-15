@@ -13,6 +13,9 @@ import '@unocss/reset/tailwind.css'
 // custom vite plugin
 import 'virtual:svgsprites'
 
+// styles
+import './app.scss'
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
