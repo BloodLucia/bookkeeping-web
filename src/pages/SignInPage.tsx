@@ -28,11 +28,11 @@ export const SignInPage: React.FC = () => {
     ])
     setError(newError)
     if (!hasError(newError)) {
-      const response = await post<{ jwt: string }>('/login', data)
+      const response = await post<{ token: string }>('/login', {"email": data.email, "verification_code": data.code})
         .catch(onSubmitError)
-      const jwt = response.data.jwt
+      const jwt = response.data.token
       localStorage.setItem('jwt', jwt)
-      const from = search.get('from') || '/items'
+      const from = search.get('from') || '/'
       nav(from)
     }
   }
