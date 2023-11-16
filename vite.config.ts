@@ -7,8 +7,8 @@ import { svgsprites } from './vite_plugins/svgsprites'
 export default defineConfig({
   server: {
     proxy: {
-      "/": {
-        target: "http://127.0.0.1:8888/api/v1",
+      "/api/": {
+        target: "http://127.0.0.1:8888/api/v1/",
         changeOrigin: false
       }
     }
