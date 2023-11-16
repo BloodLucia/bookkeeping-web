@@ -13,7 +13,6 @@ import 'virtual:uno.css'
 // custom vite plugin
 import 'virtual:svgsprites'
 
-// styles
 import './app.scss'
 
 vhCheck()
