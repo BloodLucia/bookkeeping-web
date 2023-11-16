@@ -3,7 +3,7 @@ import { useLoadingStore } from "../stores/useLoadingStore";
 import { useNavigate } from "react-router-dom";
 
 export const ajax = axios.create({
-  baseURL: import.meta.env.DEV ? "/" : "",
+  baseURL: import.meta.env.DEV ? "http://127.0.0.1:8888/api/v1" : "",
   headers: {
     'Content-Type': 'application/json'
   },
