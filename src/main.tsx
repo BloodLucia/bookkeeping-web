@@ -7,9 +7,6 @@ import { router } from './routes/router.tsx'
 // unocss
 import 'virtual:uno.css'
 
-// reset css
-import '@unocss/reset/tailwind.css'
-
 // custom vite plugin
 import 'virtual:svgsprites'
 
