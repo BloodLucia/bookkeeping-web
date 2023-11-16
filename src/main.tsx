@@ -13,8 +13,12 @@ import 'virtual:svgsprites'
 // styles
 import './app.scss'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const div = document.getElementById('root') as HTMLElement
+
+const root = ReactDOM.createRoot(div)
+root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 )
+export { div as rootDiv }
