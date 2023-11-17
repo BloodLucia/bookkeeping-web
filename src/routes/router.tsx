@@ -3,6 +3,7 @@ import { SignInPage } from '../pages/SignInPage'
 import { ajax } from '../utils/ajax'
 import { ErrorPage } from '../pages/ErrorPage'
 import { ErrorUnauthorized } from '../errors'
+import { TagsNewPage } from '../pages/TagsNewPage'
 
 export const router = createHashRouter([
   {
@@ -16,7 +17,10 @@ export const router = createHashRouter([
         }
         throw e
       })
-    }
+    },
+    children: [
+      { path: '/tags/new', element: <TagsNewPage /> }
+    ]
   },
   { path: '/sign_in', element: <SignInPage /> },
 ])
