@@ -28,9 +28,9 @@ export const SignInPage: React.FC = () => {
     ])
     setError(newError)
     if (!hasError(newError)) {
-      const response = await post<{ token: string }>('/login', {"email": data.email, "verification_code": data.code})
+      const response = await post<{ data: {token: string} }>('/login', data)
         .catch(onSubmitError)
-      const jwt = response.data.token
+      const jwt = response.data.data.token
       localStorage.setItem('jwt', jwt)
       const from = search.get('from') || '/'
       nav(from)
@@ -42,9 +42,7 @@ export const SignInPage: React.FC = () => {
     ])
     setError(newError)
     if (hasError(newError)) { throw new Error('表单出错') }
-    const response = await post('/sendVerificationCode', {
-      email: data.email
-    })
+    const response = await post('/sendVerificationCode', { email: data.email })
     return response
   }
   return (
