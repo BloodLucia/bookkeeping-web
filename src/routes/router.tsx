@@ -12,9 +12,7 @@ export const router = createHashRouter([
     errorElement: <ErrorPage />,
     loader: async () => {
       return await ajax.get('/ping').catch((e) => {
-        if (e.response?.status === 401) {
-          throw new ErrorUnauthorized()
-        }
+        if (e.response?.status === 401) throw new ErrorUnauthorized()
         throw e
       })
     },

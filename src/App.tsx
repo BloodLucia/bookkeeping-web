@@ -7,13 +7,12 @@ import { useEffect } from "react"
 import { RouterProvider } from "react-router-dom"
 import { router } from "./routes/router"
 
-// unocss
 import 'virtual:uno.css'
 
-// custom vite plugin
 import 'virtual:svgsprites'
 
 import './app.scss'
+import './global.scss'
 
 vhCheck()
 
