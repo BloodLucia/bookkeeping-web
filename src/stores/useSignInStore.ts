@@ -12,7 +12,7 @@ interface SignIn {
   setData: (data: Partial<Data>) => void
   setError: (error: Partial<FormError<Data>>) => void
 }
-export const useSignInStore = create<SignIn>((set, get) => (
+export const useSignInStore = create<SignIn>((set) => (
   {
     data: {
       // TODO: 删掉这个邮箱地址
