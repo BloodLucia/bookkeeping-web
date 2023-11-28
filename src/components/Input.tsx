@@ -1,6 +1,7 @@
 import { ChangeEvent, ReactNode } from 'react'
 import { SmsCodeInput } from './input/SmsCodeInput'
 import { EmojiInput } from './input/EmojiInput'
+import { DateInput } from './input/DateInput'
 
 type Props<T> = {
   label?: string | ReactNode
@@ -54,7 +55,7 @@ export const Input = <T extends string>(props: Props<T>) => {
       case 'sms_code':
         return <SmsCodeInput {...common} request={props.request} />
       case 'date':
-        return <></>
+        return <DateInput {...common} />
       default:
         return null
     }
