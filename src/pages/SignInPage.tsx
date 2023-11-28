@@ -32,7 +32,7 @@ export const SignInPage: React.FC = () => {
         .catch(onSubmitError)
       const jwt = response.data.data.token
       localStorage.setItem('jwt', jwt)
-      const from = search.get('from') || '/'
+      const from = search.get('from') || '/items'
       nav(from)
     }
   }

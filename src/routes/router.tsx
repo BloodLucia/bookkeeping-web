@@ -4,6 +4,7 @@ import { ajax } from '../utils/ajax'
 import { ErrorPage } from '../pages/ErrorPage'
 import { ErrorUnauthorized } from '../errors'
 import { TagsNewPage } from '../pages/TagsNewPage'
+import { ItemsPage } from '../pages/ItemsPage'
 
 export const router = createHashRouter([
   {
@@ -17,6 +18,7 @@ export const router = createHashRouter([
       })
     },
     children: [
+      { path: '/items', element: <ItemsPage /> },
       { path: '/tags/new', element: <TagsNewPage /> }
     ]
   },
